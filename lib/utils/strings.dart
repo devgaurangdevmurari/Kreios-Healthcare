@@ -1,0 +1,9 @@
+const str_submit_document = 'Submit Document';
+const str_submissions = 'Submissions';
+const str_modules = 'Modules';
+const str_document_name = 'Document name';
+const str_messages = 'Messages';
+const str_notifications = 'Notifications';
+const str_media_library = 'Media Library';
+const str_from = 'from';
+const str_see_more = 'See more';
