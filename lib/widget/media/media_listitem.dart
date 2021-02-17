@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 import '../index.dart';
+import '../../utils/index.dart';
 
 class MediaListItem extends StatelessWidget {
   MediaListItem({this.data, this.videoPlayerController});
@@ -21,6 +22,7 @@ class MediaListItem extends StatelessWidget {
             )
           ]),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Stack(
             children: [
@@ -102,7 +104,23 @@ class MediaListItem extends StatelessWidget {
                     )
                   ],
                 ),
-              )
+              ),
+              Container(
+                alignment: Alignment.center,
+                height: 260,
+                child: GestureDetector(
+                  child: Wrap(
+                    children: [
+                      Image.asset(
+                        kPlay,
+                        width: 32,
+                        height: 32,
+                        fit: BoxFit.contain,
+                      )
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
           Container(

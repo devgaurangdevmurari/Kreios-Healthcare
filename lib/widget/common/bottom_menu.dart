@@ -15,7 +15,7 @@ class BottomMenu extends StatelessWidget {
         behavior: HitTestBehavior.translucent,
         child: Container(
           padding: EdgeInsets.symmetric(vertical: 20),
-          child: Row(
+          child: Column(
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

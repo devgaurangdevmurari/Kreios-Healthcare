@@ -44,6 +44,7 @@ class _MediaScreenState extends State<MediaScreen> {
       ..addListener(() {
         setState(() {});
       });
+    videoPlayerController.setVolume(0.0);
     videoPlayerController.play();
   }
 
