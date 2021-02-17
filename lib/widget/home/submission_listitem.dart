@@ -20,43 +20,48 @@ class SubmissionListItem extends StatelessWidget {
         ],
       ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Row(
-            children: [
-              Container(
-                padding: EdgeInsets.all(8),
-                decoration: BoxDecoration(
-                  color: data['color'],
-                  borderRadius: BorderRadius.circular(6),
+          Expanded(
+            child: Row(
+              children: [
+                Container(
+                  padding: EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                    color: data['color'],
+                    borderRadius: BorderRadius.circular(6),
+                  ),
+                  child: Image.asset(
+                    data['icon'],
+                    width: 28,
+                    height: 28,
+                  ),
                 ),
-                child: Image.asset(
-                  data['icon'],
-                  width: 28,
-                  height: 28,
+                SizedBox(
+                  width: 12,
                 ),
-              ),
-              SizedBox(
-                width: 12,
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    '${data['name']}',
-                    style: TextStyle(
-                        fontWeight: FontWeight.w600, color: Color(0xFF27272E)),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        '${data['name']}',
+                        style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            color: Color(0xFF27272E)),
+                      ),
+                      SizedBox(
+                        height: 6,
+                      ),
+                      Text(
+                        '${data['description']}',
+                        style:
+                            TextStyle(color: Color(0xFF425466), fontSize: 14),
+                      ),
+                    ],
                   ),
-                  SizedBox(
-                    height: 6,
-                  ),
-                  Text(
-                    '${data['description']}',
-                    style: TextStyle(color: Color(0xFF425466), fontSize: 14),
-                  ),
-                ],
-              ),
-            ],
+                )
+              ],
+            ),
           ),
           Image.asset(
             kMore,

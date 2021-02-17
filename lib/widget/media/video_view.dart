@@ -13,6 +13,7 @@ class VideoView extends StatelessWidget {
           ? ClipRRect(
               borderRadius: BorderRadius.circular(16),
               child: Container(
+                width: double.infinity,
                 height: size,
                 child: AspectRatio(
                   aspectRatio: videoPlayerController.value.aspectRatio,
